@@ -62,7 +62,7 @@ $(document).ready(function () {
   $("#inputBtn").bind("click", function () {
     $.ajax({
       method: "POST",
-      url: "https://my-json-server.typicode.com/vasylYatsiuk/lab4/db",
+      url: "table.php",
       data: {
         nameInput: $("#nameInput").val(),
         author: $("#author").val(),
