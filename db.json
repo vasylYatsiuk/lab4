@@ -1,5 +1,7 @@
-[
-  {
+
+{
+  "posts": [
+    {
     "lastElementNumber": 1,
     "nameInput": "Post 1",
     "author": "Post 2",
@@ -11,4 +13,8 @@
     "receivedCount": "Post 1",
     "image": "Post 1"
   }
-]
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
