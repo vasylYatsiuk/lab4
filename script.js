@@ -2,9 +2,9 @@ $(document).ready(
     function () {
         $(document).on("submit", "#inputForm", function (e) {
             e.preventDefault();
-            var lastElementNumber = Number($('table tbody tr:last td:first').text());
-            $("table tbody").append(`<tr data-index="`+(lastElementNumber+1)+`">
-                                    <td>`+(lastElementNumber+1)+`</td>
+            var id = Number($('table tbody tr:last td:first').text());
+            $("table tbody").append(`<tr data-index="`+(id+1)+`">
+                                    <td>`+(id+1)+`</td>
                                     <td>`+$("#nameInput").val()+`</td>
                                     <td>`+ $("#author").val()+`</td>
                                     <td>`+ $("#ganre").val()+`</td>
@@ -14,7 +14,7 @@ $(document).ready(
                                     <td>`+ $("#dateSell").val()+`</td>
                                     <td>`+ $("#receivedCount").val() +`</td>
                                     <td><img src="`+ $(" #image").val() +`" width="80px" height="100px"></td>
-                                    <td><a data-index="`+ (lastElementNumber + 1) +`" class="delete" href="#">Delete</a></td>
+                                    <td><a data-index="`+ (id+1) +`" class="delete" href="#">Delete</a></td>
                                 </tr>`);
             $("#inputForm")[0].reset();
         });

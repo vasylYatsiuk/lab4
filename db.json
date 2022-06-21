@@ -1,17 +1,23 @@
 {
-  "posts":[
+  "posts": [
     {
-    "lastElementNumber": 1,
-    "nameInput": "Post 145435",
-    "author": "Post 2",
-    "ganre": "Post 3",
-    "date": "Post 1",
-    "sellCount": "Post 1",
-    "price": "Post 1",
-    "dateSell": "Post 1",
-    "receivedCount": "Post 1",
-    "image": "Post 1"
-  }
+      "nameInput": "1",
+      "author": "1",
+      "ganre": "1",
+      "date": "1",
+      "sellCount": "1",
+      "price": "1",
+      "dateSell": "1",
+      "receivedCount": "1",
+      "image": "1",
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    }
   ],
   "profile": {
     "name": "typicode"
