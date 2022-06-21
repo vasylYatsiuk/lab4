@@ -1,9 +1,10 @@
 $(document).ready(function () {
   $.get(
-    "https://my-json-server.typicode.com/vasylYatsiuk/lab4/db",
+    "https://my-json-server.typicode.com/vasylYatsiuk/lab4/posts",
     function (data) {
       console.log(data);
-      for (i = 0; i < data.length; i++) {
+      console.log(data.length);
+      for (let i = 0; i < data.length; i++) {
         $("table tbody").append(
           `
             <tr>
@@ -38,7 +39,7 @@ $(document).ready(function () {
             data[i].image +
             `</th>
               <th><a class="delete" href="#" data-id="` +
-            data[i].id +
+            data[i].lastElementNumber +
             `">Delete</a>
             </tr>
             `
@@ -51,7 +52,7 @@ $(document).on("click", ".delete", function (e) {
   e.preventDefault();
   id = $(this).data("id");
   $.post(
-    "https://my-json-server.typicode.com/vasylYatsiuk/lab4/db",
+    "https://my-json-server.typicode.com/vasylYatsiuk/lab4/posts",
     { action: "delete", id: id },
     function (data) {
       console.log(data);
@@ -62,7 +63,7 @@ $(document).ready(function () {
   $("#inputBtn").bind("click", function () {
     $.ajax({
       method: "POST",
-      url: "https://my-json-server.typicode.com/vasylYatsiuk/lab4/dbn",
+      url: "https://my-json-server.typicode.com/vasylYatsiuk/lab4/posts",
       data: {
         nameInput: $("#nameInput").val(),
         author: $("#author").val(),
